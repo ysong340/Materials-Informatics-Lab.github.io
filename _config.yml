@@ -3,7 +3,7 @@ title: Materials Informatics Course Blog
 email: tony.fast@gmail.com
 description: > 
   Course Blog Page for the GT Materials Informatics Course
-baseurl: "/Materials-Informatics-Lab" # the subpath of your site, e.g. /blog/
+baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://tonyfast.com" # the base hostname & protocol for your site
 twitter_username: docfast
 github_username:  tonyfast
