@@ -1,0 +1,29 @@
+---
+layout: page
+title: Good Reads
+permalink: /reads/
+
+references:
+- url: http://www.wired.com/2014/08/sciences-big-data-problem/
+  source: Wired
+  title: Science’s Big Data Problem
+- url: http://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html?_r=0
+  source: The New York Times
+  title: "For Big-Data Scientists, ‘Janitor Work’ Is Key Hurdle to Insights"
+- url: http://www.scientificamerican.com/article/how-supercomputers-will-yield-a-golden-age-of-materials-science/
+  title: How Supercomputers Will Yield a Golden Age of Materials Science
+  source: Scientific American
+- url: http://www.nature.com/nbt/journal/v31/n11/full/nbt.2740.html
+  title: So you want to be a computational biologist?
+  source: Nature
+- url: http://data-informed.com/soft-skills-matter-data-science/
+  title: Why Soft Skills Matter in Data Science
+  from: Data Informed
+---
+
+<div class="row">
+  {% for refs in page.references %}
+  <li><a href="{{refs.url}}">{{refs.title}}</a>
+    {% if refs.source %} from {{refs.source}} {% endif %}</li>
+  {% endfor %}
+</div>
