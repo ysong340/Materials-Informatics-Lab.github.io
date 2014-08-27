@@ -1,0 +1,121 @@
+---
+layout: post
+title: |
+  The Presentation Layer
+categories: week-2
+author: tonyfast
+tagline: >
+  The roles, generality, and importance of presenting and publishing scientific research.
+latex: true
+tags:
+- github
+- yaml
+- gist
+references:
+# Pre competitive research publishing
+- https://gist.github.com/tonyfast/7616aee4c0c2afe647bf
+# Lab to the cloud hack
+- https://gist.github.com/tonyfast/eb173fc2e89099adb1ba
+---
+
+The presentation layer of your research are any form of its public facing components.
+Peer reviewed journal articles on [Science Direct](http://sciencedirect.com), a downloaded PDF, and a print of the PDF
+all indicate different presentation layers for similar content. Presentation layers make
+content visible to your peers.
+
+Technology has severely disrupted presenting content in the mainstream, but the materials science
+_and many physical scienes_ are slow to adapt.  Leveraging modern technology to publish research science
+content is disruptive.  We will raise new concerns and overshadow old concerns.
+
+> Where are some examples of technology as a disruption?
+
+## Units of Work
+
+
+In physics, [units of work](http://en.wikipedia.org/wiki/Work_(physics)) are defined in Joules.
+The velocity of software development is defined by
+[units of work](http://en.wikipedia.org/wiki/Velocity_(software_development))
+ over a time interval with units analogous to $$\frac{man hours}{time  interval}$$.  Units of work describe
+ human capital invested into a project.
+
+Projects, or large workflows, are build upon parallel and serial units of work.  Units of work may:
+
+* Produce Data
+* Produce Software
+* Perform Experiments
+* Run-time Costs
+* Publish/Share results
+
+Every operation can be accounted for as a unit of work.  Understanding the cost and repetitiveness of units of work
+can provide scientists with heuristics for knowing [when and when not to pipeline](http://materials-informatics-lab.github.io/week-1/2014/08/19/Time-is-not-a-friend.html#workflow-redundancies-and-pipelines).
+
+> In the class we will often compare convential and progressive units of work.
+
+### Units of Work in Research
+
+There are units of work in empirical and computational research projects.  Understanding Units of Work
+in methodologies and research tasks can only be understood by domain experts.  It is expected that that domain itself
+will compact, streamline, and express units of work.
+
+> In this course, we can't directly help you with streamlining research work.
+
+### Units of Work in Publishing
+
+Publishing can be used for:
+
+* Internal or personal use
+* Sharing with a research team
+* Dissemination to the public
+
+Units of work in publishing can be assessed better than in research.  Also, units of work in publishing
+are pieces of the units of work in research.  Maximizing the value for a particular unit of work
+will enhance and exedite the research even if it is simply to migitate latency in research.
+
+In this class, we will rigorously Units of Work for publication and learn to streamline our
+collaborations using the *best* software we can.
+
+## [MIME](http://diveintohtml5.info/past.html)
+
+[From Dive into HTML5](http://diveintohtml5.info)
+
+> Every time your web browser requests a page, the web server sends “headers” before it sends the actual page markup. These headers are normally invisible, although there are web development tools that will make them visible if you’re interested. But the headers are important, because they tell your browser how to interpret the page markup that follows. The most important header is called Content-Type, and it looks like this:
+
+> Content-Type: text/html
+“text/html” is called the “content type” or “MIME type” of the page. This header is the only thing that determines what a particular resource truly is, and therefore how it should be rendered. Images have their own MIME types (image/jpeg for JPEG images, image/png for PNG images, and so on). JavaScript files have their own MIME type. CSS stylesheets have their own MIME type. Everything has its own MIME type. The web runs on MIME types.
+
+### API's
+
+[Application Programmer Interfaces](http://en.wikipedia.org/wiki/Application_programming_interface) construct data
+for programs and cloud services to share data with other websites to operate on or visualize.  API's enable reusability.
+
+### Views
+
+Views are [templating engines](http://en.wikipedia.org/wiki/Web_template_system) that aggregate API data into a
+front facing web view.  URL's are not static anymore, they are resemble functions.
+
+### Minimizing Units of Work
+
+#### Using API's
+
+Web views do not present **ALL** of the data requested by a webpage.  A front-end designer has chosen the salient
+features to be displayed based on a structured API call.  This view may be enough to illustrate the contents of
+a piece of information to incentivize access from another user.
+
+##### Flickr as an Example
+
+When an image is uploaded to [Flickr](https://flickr.com), the raw data is stored and so are several thumbnailed versions of the image.
+The thumbnailed images would be presented in a view, but they allow you to access the raw data!
+
+##### Dropbox as an Example
+
+Dropbox has default settings to view excel files, but they do not provide the same interactivity.  The view of the Excel
+file presents useful information in communicating the contents of the data.
+
+#### Sharability, Interactivity, and Discoverability
+
+#### Centralization
+
+Meandering across several disparate software services by introduce inefficiencies in sharing information.
+Centalizing research by-products and dicussion can drastically reduce the Units of Work in information sharing and publication.
+Similarly, centralization will make it easier to aggregate already published research results
+when a project is deemed ready for peer review
