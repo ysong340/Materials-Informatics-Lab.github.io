@@ -8,12 +8,19 @@ layout: default
 
   <ul class="post-list">
       {% for post in paginator.posts %}
+{% assign author={{site.data.instructors | map:post.author }} %}
+
       <li>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
         <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> <small><small>by {{author[0].name}}</small></small>
         </h2>
+        <p><i>
+          {{post.tagline}}
+        </i></p>
+
+
       </li>
     {% endfor %}
   </ul>
