@@ -10,7 +10,24 @@ teams:
   gist: Mahdi-Roozbahani/5a6e789d62f9fe3704ef
 ---
 
+
 <div class="row">
+{% capture description %}
+> Material structure quantification is the central theme of the class. I am looking to
+define a project for every student where there is a significant demonstration that the
+student has learned about data-driven objective identification of low-dimensional
+representation of the structure. This can be done either in the context of structure-property
+ linkages or in the context of process-structure linkages. If the description is not clear, I
+ encourage student(s) to make an appointment with me to discuss their ideas and give me a chance
+ to guide them into a specific project.
+
+[From @suryakalidindi](https://github.com/Materials-Informatics-Lab/Materials-Informatics-Lab.github.io/issues/2)
+{% endcapture %}
+
+{{description|markdownify}}
+</div>
+<div class="row">
+  <h2>Teams</h2>
   {% for team in page.teams %}
     <li><a href="#{{forloop.index}}"><h3>Team {{forloop.index}}</h3></a></li>
   {% endfor %}
