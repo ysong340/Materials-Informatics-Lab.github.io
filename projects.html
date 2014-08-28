@@ -1,0 +1,34 @@
+---
+layout: page
+title: Projects
+permalink: /projects/
+
+teams:
+- members:
+  gist: npaulson/8ce65e00aa9ca27c55df
+- members:
+  gist: Mahdi-Roozbahani/5a6e789d62f9fe3704ef
+---
+
+<div class="row">
+  {% for team in page.teams %}
+    <li><a href="#{{forloop.index}}"><h3>Team {{forloop.index}}</h3></a></li>
+  {% endfor %}
+</div>
+
+
+<div class="row">
+  {% for team in page.teams %}
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 id="{{forloop.index}}">Team {{forloop.index}}</h2>
+    </div>
+    <div class="panel-body">
+      <script src="https://gist.github.com/{{team.gist}}.js"></script>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+
+{% include disqus.html %}
