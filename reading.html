@@ -3,7 +3,7 @@ layout: page
 title: Good Reads
 permalink: /reads/
 
-references:
+popular:
 - url: http://www.wired.com/2014/08/sciences-big-data-problem/
   source: Wired
   title: Science’s Big Data Problem
@@ -18,13 +18,36 @@ references:
   source: Nature
 - url: http://data-informed.com/soft-skills-matter-data-science/
   title: Why Soft Skills Matter in Data Science
-  from: Data Informed
+  source: Data Informed
 - url: http://diveintohtml5.info
   title: Dive Into HTML5
+
+materials:
+- url: http://link.springer.com/article/10.1007/s11837-014-1078-9
+  title: New TMS Study Tackles the Challenge of Integrating Materials Simulations Across Length Scales
+  source: The Minerals, Metals & Materials Society
+- url: http://nist.gov/mgi/upload/NIST-IR-7898.pdf
+  title: Materials Genome Initiative White Paper
+  source: National Institute of Standards and Technology
+- url: http://www.sciencedirect.com/science/article/pii/S0749641910000306
+  title: A perspective on trends in multiscale plasticity
+  source: International Journal of Plasticity
+- url: http://download.springer.com/static/pdf/674/art%253A10.1007%252Fs11837-011-0057-7.pdf
+  title: Microstructure Informatics Using Higher-Order Spatial Correlations and Efficient Data-Mining Protocols
+  source: Journal of Materials
 ---
 
 <div class="row">
-  {% for refs in page.references %}
+  <h3>Popular Articles</h3>
+  {% for refs in page.popular %}
+  <li><a href="{{refs.url}}">{{refs.title}}</a>
+    {% if refs.source %} from {{refs.source}} {% endif %}</li>
+  {% endfor %}
+</div>
+
+<div class="row">
+  <h3>Materials Science Articles</h3>
+  {% for refs in page.materials %}
   <li><a href="{{refs.url}}">{{refs.title}}</a>
     {% if refs.source %} from {{refs.source}} {% endif %}</li>
   {% endfor %}
