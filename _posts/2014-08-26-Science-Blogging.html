@@ -1,0 +1,269 @@
+---
+layout: post
+title: |
+  Research Science Blogging
+author: tonyfast
+categories: week-2
+tagline: >
+  A focused approach to research science blogging using Jekyll pages and YAML Front Matter.
+
+tags:
+- github
+- yaml
+- gist
+---
+
+## Science Blogging versus Research Blogging
+
+The goals of most science blogging are to disseminate results to the general public.
+Research blogging shares results with other domain experts and specialists; research science injects more specialization.  The content that is shared
+in popular and research science are very different ideas.  In research science, we are reporting for scientists and context is crucial;
+ consumable, sensationalized reporting are not of this flavor.
+
+> _Gists and Jekyll pages are two ways to publish progress in research science reporting._
+
+## Gists
+
+As a researcher, programmer, and data scientist, Github Gists satisfy most of my needs to share
+small pieces of information.  Often I present content as a combination of code and documents.  Gists (and all
+Github editors) use the [ACE editor](http://ace.c9.io/#nav=about "High Performance Code Editor for the Web")
+which provides [syntax highlighting](http://pcwalton.blogspot.com/2010/11/syntax-highlighting-specification.html)
+for a 110 languages.
+
+Providing a Gist with an {% raw %}``filename.ext``{% endraw %} will activate
+syntax highlighting for that {% raw %}``ext``{% endraw %}. (e.g. {% raw %}``file.py``{% endraw %} would activate
+Python syntax highlighting.)
+
+### Uses for Gists
+
+* Sharing Code Snippets
+* Thought Experiments
+* Notes
+* Creating Short Documents
+* Quick Translation Codes
+* Embed them for later use.
+
+## Jekyll Pages for Mini Research Sites
+
+Jekyll (Github) Pages are a great way to share on-the-fly research results through mini-research sites.  While
+Gists are great for undefined thoughts and recyclable content, mini-research sites are more purpose driven
+presentation layers.  Mini-research sites provide research content to disseminate to colleagues, funding agencies, and peer
+ reviewed research.  Mini-research sites
+sit alongside a repository that is designed specifically to manage code and software used in
+research.  Mini-research sites are a means to centralize code, publication, and data (sorta).
+
+> Let's assume you have cloned the [boilerplate](https://github.com/Materials-Informatics-Lab/research-pages) and modified ``_config.yml`` accordingly.
+
+### Creating Posts
+
+Once a Jekyll boilerplate is installed, posts can be easily created by adding files to the ``_posts`` directory.
+
+The file name of the ``_post`` files
+must contain
+
+* Year
+* Month
+* Date
+* Title
+* ``*.html``
+
+separated by hyphens in the following format to be interpretted by Jekyll:
+
+```
+_posts/YYYY-MM-DD-title-with-hyphens.html
+```
+
+### YAML Front Matter
+
+Each post must contain [YAML Front Matter](http://jekyllrb.com/docs/frontmatter/) in order for Jekyll to
+interpet it.  [YAML is a human-interpretted markup language](/tools/#YAML Ain't Markup Language); it provides comments using ``#`` and it can be serialized and de-serialized like JSON and XML.
+
+> YAML is sensitive to indents! Be Aware!
+
+Front Matter is defined by the text block between two pairs of _three hyphens_ ``---``
+
+{% highlight YAML %}
+--- # Start front matter
+layout: post # Triggers the template to render
+title: Example Front Matter # Alternate title
+foo: bar
+--- # End front matter
+
+# Post Content
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+# ``Foo`` is a user defined variable
+
+{% raw %}``{{page.foo}}``{% endraw %} can be used to access the page variable ``foo``.
+
+The user defined variable ``foo`` is equal to {{page.foo}}.
+
+{% endhighlight %}
+
+> [Example Post](/2014/09/01/Example-Post.html)
+
+YAML Front-Matter serves **three** main purposes in my mind.
+
+1. Supply Jekyll with Important Variables to Render the Site.
+2. Stylize content using Templates(_layouts_)
+3. Assigning user defined variables.
+
+#### Dummy Front Matter
+
+As stated eariler, YAML front matter is required for Jekyll pages.  The Jekyll triggers are not required to render HTML content.
+Dummy front matter with contain two rows of triple hyphens with no text in between.
+
+{% highlight YAML %}
+---
+---
+{% endhighlight %}
+
+
+### The Jekyll Interpreter
+
+Jekyll is a static-blog interpreter.  Here's what Jekyll does
+
+* Jekyll provides a canonical file directory structure to make websites.
+* Jekyll makes it easy to whip up your own blog.
+* Content _largely_ is Separated from Style.
+* Converts dynamic site content into a static webpages.
+
+  Jekyll pre-renders every page on a website as individual webpages using the daisy chain of site layouts.
+  Jekyll requires a bit of time to render a website so give your pages a change to reload if it takes too long.
+
+#### Jekyll Site Variables
+
+Jekyll allows for ``page`` and ``site`` variables.  Jekyll Site Variables determine how the website is represented.
+
+[**Some Site Variables**](http://jekyllrb.com/docs/variables/#page-variables)
+
+* ``title`` - Alternate title for the post otherwise the ``title`` portion of the post name is rendered as the title at the end of the post file name without hyphens.
+* ``date`` - A finer resolution time stamp for a post.  Posts are ordered chronologically and only have resolution
+the day in the title.  ``date`` is required for the best post ordering.
+* ``categories`` - A coarse ontology of the post.
+* ``tags`` - A fine ontology of the post.
+
+``categories`` and ``tags`` can be used for [Latent Semantic Indexing](http://en.wikipedia.org/wiki/Latent_semantic_indexing).
+
+
+#### Post Templating
+
+Jekyll is a templating language that stylizes ``post`` and ``page`` content.  The YAML front matter
+variable ``layout`` triggers a chain of layouts to be called when rendering the Jekyll site.
+
+* **Post Layout**
+
+  ``layout: post`` tells Jekyll to use ``./_layouts/post.html`` to render the ``{% raw %}{{content}}{% endraw %}``
+  below the YAML front matter and its HTML or Markdown.
+
+* **Default Layout**
+
+  ``_layouts/post.html`` contains the Front Matter
+
+{% highlight YAML %}
+---
+layout: default
+---
+{% endhighlight %}
+
+  where Jekyll defines ``{% raw %}{{content}}{% endraw %}`` as the content rendered by ``_layouts/post.html``.  Modified ``{% raw %}{{content}}{% endraw %}``
+  is passed to ``_layouts/default.html`` which is another template.
+
+* **Render**
+
+  ``_layouts/default.html`` contains no front matter and is the final stop in the template chain.  This is the final
+  stop in styling.
+
+
+
+#### User Defined Variables.
+
+YAML Front Matter are triggers for Jekyll to render your static website and
+_user-defined variables_ to use in the post.
+
+User defined variables bring immense value to research science.   can be
+a tedious manner to remove salient *open science* material from websites.  It make be hard to automate/script the important content
+within a scientific webpage.  Our goal with research pages is to make information accessible and digestible by our colleagues.
+
+YAML accepts the following:
+
+* Floats/ Strings
+* Arrays
+* Nested Structures
+* Block Text
+
+**Commented YAML User-Defined Front Matter**
+
+{% highlight YAML %}
+---
+# Source of the data from a Public Dropbox folder
+source: https://www.dropbox.com/s/cy4jumu6c50jut3/matin-test.png?dl=0
+# Dummy Values for Statistics
+stats:
+  mean: .625
+  std: .005
+  # The results of the spatial statistics are stored in a Mat file avaiable for downlaod
+  spatial: https://www.dropbox.com/s/fadqzi889bw4v9s/ForSai.mat?dl=0
+# An array of references used for the project.
+# Refernce images
+imgs:
+  - https://farm4.staticflickr.com/3919/14466781737_a37c893a07_b.jpg
+  - https://farm4.staticflickr.com/3919/14466781737_a37c893a07_b.jpg
+# References to inform post
+references:
+  - http://google.com
+  - http://dropbox.com
+---
+{% raw %}
+# Reference Simple Assignment
+
+[Raw Data Source]({{page.source}})
+
+
+# Array Links to Second Entry
+
+![A Diagram]({{page.imgs[1]}})
+
+# Nested Structure
+
+{{page.stats.mean}}
+
+{% endraw %}
+
+{% endhighlight %}
+
+### Importance of Front Matter
+
+The YAML front matter allows the researcher to highlight important content for improved dissemination of research information.
+If a digital publication of scientific research exists then one would use an API (_if it exists_) or [Web scraping](http://en.wikipedia.org/wiki/Web_scraping)
+to extract content from a webpage.
+
+YAML Front Matter allows each researcher to present a filtered digital publication that separates the underlying
+data and metadata that drives research from the presentation and interpretation of the work.  YAML Front Matter
+can be used to share:
+
+* **Data** - Source and Derived Data and Metadata
+* **References** - Links to references that were used to create the page
+* **Equations** - Activate MathJax and Share important equations
+
+The authoring researcher can deliberately make their research more accessible in a digital publication environment
+by organizing their front matter in an accessible way to their colleagues.
+
+> **Extending Services with API's** The advantage of prescribing research content in the YAML front matter means
+that it is possible to take advantage of native rendering tools from external software providers and their
+API's can be used to enhance the already provided information.
+
+##### EXAMPLE: Extending Plot.ly services
+
+1. [Plot.ly native view](https://plot.ly/~TonyFast/4)
+
+2. Embedded Plot.ly view <span class="octicon octicon-chevron-down"></span>
+
+  <iframe width="600" height="432" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~TonyFast/4/.embed?width=600&height=432"></iframe>
+
+3. Raw Data Access
+
+  Plot.ly has made it possible access raw code to reproduce visualizations locally by simply adding
+  file extensions to the plot.  Appending file extensions ``*.m``,``*.py``, and ``*.r`` to our ``[https://plot.ly/~TonyFast/4](https://plot.ly/~TonyFast/4)``
+  original plot allows users to access the plot in [Matlab](https://plot.ly/~TonyFast/4.m), [Python](https://plot.ly/~TonyFast/4.py), and [R](https://plot.ly/~TonyFast/4.r), respectively.

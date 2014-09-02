@@ -1,0 +1,28 @@
+---
+layout: post # Triggers the template to render
+title: Example Front Matter # Alternate title
+foo: bar
+tags: Front-Matter Jekyll YAML Templates # Jekyll Site Variables
+---
+
+# Post Content
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+# ``Foo`` is a user defined variable
+
+{% raw %}``{{page.foo}}``{% endraw %} can be used to access the page variable ``foo``.
+
+The user defined variable ``foo`` is equal to ``{{page.foo}}``.
+
+
+## Front Matter
+
+{% highlight YAML %}
+---
+layout: post # Triggers the template to render
+title: Example Front Matter # Alternate title
+foo: bar
+tags: Front-Matter Jekyll YAML Templates # Jekyll Site Variables
+---
+{% endhighlight %}
