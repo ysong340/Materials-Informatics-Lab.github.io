@@ -1,0 +1,118 @@
+---
+layout: post
+title: Preparing Your Project Repositories
+author: tonyfast
+tagline: >
+  Steps to setting up your project repository and mini-site.
+references:
+- https://help.github.com/articles/fork-a-repo # 0
+- https://help.github.com/articles/adding-collaborators-to-a-personal-repository # 1
+
+published: false
+latex: true
+autonumber: true
+---
+
+$$\begin{equation}
+\mathbf{E}^\mathrm{e} = \frac{1}{2} \left[ \left(\mathbf{F}^\mathrm{e}\right)^\text{T} \cdot \
+\mathbf{F}^\mathrm{e} - \mathbf{I} \right]     \;.
+\end{equation}$$
+
+As well as the second Piola-Kirchhoff stress tensor (symmetric)
+
+$$\begin{equation}
+\boldsymbol\sigma^\text{PK2} = \mathbb{C}_0 : \mathbf{E}^\mathrm{e} \;,
+\end{equation}
+$$
+
+## Project Repositories
+
+Project repositories will manage your research
+
+* **Posts** & **Data** using the Jekyll interpreter on the ``gh-pages`` branch
+* **Codes** on other branches
+
+  The ``master`` branch will be reserved for a special purpose.
+
+* **Trajectories** with Github Issues
+
+### 1. Initializing a Repository
+
+Your project repository template will be initialized with a mini-research site.  You
+will need to make slight modifications to the repository settings after you have forked the repository.
+After a few easy steps, you will be ready to post your project content
+
+#### 1. Fork ``research-pages``
+
+When a users forks a repository they are provided with an exact replica of the repository that Github manages.
+
+One member of the research team will moderate the mini research site.  The Other members of the
+team will have their contributions tracked through Github and displayed on the mini-research site.
+
+##### Forking the Page
+
+Visit [``Materials-Informatics-Lab/research-pages``](https://github.com/Materials-Informatics-Lab/research-pages)
+and click ``Fork`` in the type right of the page.
+![Github Help Image](https://github-images.s3.amazonaws.com/help/repository/fork_button.jpg)
+
+> More on [Github Help](https://help.github.com/articles/fork-a-repo)
+
+#### 2. Change the Repository Metadata
+
+Let's get rid of the non-descript repository title and description.
+
+> Often times there is information that can not be shared.  Describe what you can.
+
+##### Change Title
+
+Visit your new repository at ``http://github.com/username/research-pages`` then click the settings
+button.
+
+![Github Help](https://github-images.s3.amazonaws.com/help/repository/repo-actions-settings.png)
+
+Then change the string in the ``Repository Name`` field.
+
+##### Change Project Description
+
+At the top of renamed repository, modify the description and URL to your mini-research site.
+
+Your mini-research site will probably have the URL ``username.github.io/new-repo-name``.
+
+###### Other metadata to change
+
+Modify the ``README.md`` to describe your project.
+
+#### 3. Configure Your Mini-Research Site
+
+On the ``gh-pages`` branch, click on the file ``_config.yml`` and then edit the file by clicking on
+the <span class="octicon octicon-pencil"></span> icon.
+
+You will need to modify the following portions of ``_config.yml``.
+
+{% highlight YAML %}
+title: "My Blog" # Give you Mini-Research Site a title
+email: you@somewhere.com # Contact info
+description: |
+  A short abstract about your research project.
+baseurl: "/research-pages" # replace ``/research-pages`` with the name of the parent repository
+url: "Materials-Informatics-Lab.github.io" # replate ``Materials-Informatics-Lab`` with your Github username
+twitter_username: twitterhandle
+github_username:  username
+# Subscribe for a disqus username if you don't have one.
+disqus: anotheruser
+{% endhighlight %}
+
+
+#### 4. Add collaborators to your project
+
+Add your team members to the project and give them the appropriate permissions.
+
+> Follow the [Github Help](https://help.github.com/articles/adding-collaborators-to-a-personal-repository) instructions.
+
+#### 5. Share a Link to the Repo
+
+Share a link to the repo in the comments here.
+
+#### 6. Some First Tasks
+
+* Make some posts with project discussions, documents, presentations, etc. relevent to the project.
