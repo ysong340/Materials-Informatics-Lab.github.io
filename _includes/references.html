@@ -1,10 +1,10 @@
 {% if page.references %}
   {% capture reference_block %}
-  ## References
+## References
 
-  {% for refs in page.references %}
-  1. [{{refs}}]({{refs}})
-  {% endfor %}
+{% for refs in page.references %}
+1. [{{refs}}]({{refs}})
+{% endfor %}
 {% endcapture %}
 
 {{ reference_block | markdownify }}
