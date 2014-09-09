@@ -1,0 +1,112 @@
+---
+layout: page
+title: Common Class Tools
+permalink: /tools/
+tools:
+  - name: Github
+    description: >
+      Github is an invaluable tool for managing flat-text files.
+    url: https://github.com
+    ref:
+    - https://pages.github.com
+    - https://education.github.com
+  - name: Gist
+    description: >
+      Gists are a great way to share your work. You can share single files, parts of files, or full applications.
+      Every gist is a Git repository, which means that it can be forked, cloned, and manipulated in every way.
+      Another novel use of Gists are to write documents in <a href="#Markdown">Markdown</a>.
+    url: https://gist.github.com
+    ref:
+    - https://gist.github.com/tonyfast
+    - http://www.roughdraft.io/
+  - name: Markdown
+    description: >
+      Markdown is a text-to-HTML conversion tool for web writers. Markdown allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML).
+    url: http://daringfireball.net/projects/markdown/
+    ref:
+    - http://daringfireball.net/projects/markdown/syntax
+    - https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+    - http://markdownpad.com/
+  - name: "YAML Ain''t Markup Language"
+    description: >
+      YAML is a human friendly <a href="http://en.wikipedia.org/wiki/Serialization">data serialization</a> standard for all programming languages.
+    url: http://www.yaml.org/
+    ref:
+    - https://jekyllrb.com/docs/frontmatter/
+  - name: Jekyll
+    description: >
+      <i>From the Developers: </i>Jekyll is a simple, blog-aware, static site generator. It takes a template directory containing raw text files in various formats, runs it through Markdown (or Textile) and Liquid converters, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server. Jekyll also happens to be the engine behind GitHub Pages, which means you can use Jekyll to host your project’s page, blog, or website from GitHub’s servers for free.
+    url: http://jekyllrb.com
+    ref:
+    - http://jekyllthemes.org/
+  - name: Disqus
+    url: https://disqus.com
+    description: >
+      Disqus is a global commenting system used by many blogs.  It is easy to embed Disqus onto any webpage using a simple html code snippet.
+    ref:
+    - https://disqus.com/admin/universalcode/
+  - name: Liquid
+    url: http://liquidmarkup.org/
+    description: >
+      Liquid is an extraction from the e-commerce system Shopify. Shopify powers many thousands of e-commerce stores which all call for unique designs. For this we developed Liquid which allows our customers complete design freedom while maintaining the integrity of our servers.
+    ref:
+    - https://github.com/Shopify/liquid/wiki/Liquid-for-Designers
+    - https://github.com/Shopify/liquid/wiki/Liquid-for-Programmers
+  - name: Latex
+    url: http://www.latex-project.org/
+    description: >
+      LaTeX is a high-quality typesetting system; it includes features designed for the production of technical and scientific documentation. LaTeX is the de facto standard for the communication and publication of scientific documents.
+      We are going to use Latex for mathematical equations
+    ref:
+    - http://www.mathjax.org/
+  - name: Bootstrap
+    url: http://getbootstrap.com/
+    description: >
+      Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.
+    ref:
+    - http://bootswatch.com
+  - name: Ipython Notebook Viewer
+    url: http://nbviewer.ipython.org/
+    description: >
+      Web ready views for your iPython notebooks on Github.
+    ref:
+    - http://ipython.org/
+  - name: Raw Git
+    url: https://rawgit.com/
+    description: CDN server for static Github files.
+---
+
+<div class="row" style="text-align:left">
+<h1>Useful References for Software</h1>
+<h2>Software Index</h2>
+{% for tool in page.tools %}
+<li><a href="#{{tool['name']}}">{{tool['name']}}</a></li>
+{% endfor %}
+</div>
+<div class="row" style="text-align:left">
+  <h2>Tools</h2>
+{% for tool in page.tools %}
+<div class="col-sm-12 col-md-12 col-lg-12">
+  <div class="panel panel-default" id="{{tool['name']}}">
+    <div class="panel-heading">
+      <h3><a href="{{tool["url"]}}">{{tool['name']}}</a></h3>
+    </div>
+    <div class="panel-body">
+      {{tool['description']}}
+    </div>
+    {% if tool.ref %}
+    <div class="panel-footer">
+
+      <h5>Other References</h5>
+      {% for ref in tool['ref'] %}
+          <li><a href="{{ref}}">{{ref}}</a></li>
+      {% endfor %}
+
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endfor %}
+</div>
+
+{% include services/disqus.html %}

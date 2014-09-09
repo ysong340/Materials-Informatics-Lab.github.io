@@ -1,0 +1,54 @@
+---
+layout: page
+permalink: /glossary/
+latex: true
+glossary:
+  - name: Spatial Domain
+    description: >
+    ref:
+  - name: Local State Space
+    description: >
+    ref:
+  - name: Microstructure Function
+    description: >
+    ref:
+  - name: Basis Function
+    description: >
+    ref:
+---
+
+<!-- Table of Contents -->
+<div class="row" style="text-align:left">
+<h2><a href="https://github.com/Materials-Informatics-Lab/Materials-Informatics-Lab.github.io/blob/master/glossary.html" title="Raw Page Content"><span class="octicon octicon-mark-github"></a>&nbsp;&nbsp;Contents</h2>
+{% for word in page.glossary %}
+<li><a href="#{{word['name']}}">{{word['name']}}</a></li>
+{% endfor %}
+</div>
+
+<div class="row" style="text-align:left">
+  <h2>Tools</h2>
+{% for word in page.glossary %}
+<div class="col-sm-12 col-md-12 col-lg-12">
+  <div class="panel panel-default" id="{{tool['name']}}">
+    <div class="panel-heading">
+      <h3>{{word['name']}}</h3>
+    </div>
+    <div class="panel-body">
+      {{word['description']}}
+    </div>
+    {% if word.ref %}
+    <div class="panel-footer">
+
+      <h5>Other References</h5>
+      {% for ref in word['ref'] %}
+          <li><a href="{{ref}}">{{ref}}</a></li>
+      {% endfor %}
+
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endfor %}
+</div>
+
+{% include services/disqus.html %}

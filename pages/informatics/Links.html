@@ -1,0 +1,56 @@
+---
+permalink: /Coding/
+layout: page
+title: Coding Tips
+
+matlab:
+- name: Commenting Nested Code in Matlab
+  url: https://gist.github.com/tonyfast/dfcb2fa957a8d2240ccc
+  type: gist
+- name: Comparing Matlab and Python Functions
+  url: http://web.stanford.edu/class/physics91si/2014/handouts/matlab-python-xref.pdf
+  type: pdf
+
+
+markup:
+- name: Escape Special Characters in JSON
+  url: http://stackoverflow.com/a/19176131
+- name: >
+    Learn X in Y minutes: X = YAML
+  url: http://learnxinyminutes.com/docs/yaml/
+---
+
+
+{% capture links %}
+## Matlab References
+
+*References for coding practice, hygeine, and usage.*
+
+{% for links in page.matlab %}
+{% assign ltype='' %}
+{% if links.type %}
+{% capture ltype %}
+(*{{links.type}}*)
+{% endcapture %}
+{% endif %}
+* [{{links.name}}]({{links.url}}) {{ltype}}
+{% endfor %}
+
+<hr>
+## Markup References
+
+*References for reading, creating, using, and iterating on JSON and YAML objects.*
+{% for links in page.markup %}
+{% assign ltype='' %}
+{% if links.type %}
+{% capture ltype %}
+(*{{links.type}}*)
+{% endcapture %}
+{% endif %}
+* [{{links.name}}]({{links.url}}) {{ltype}}
+{% endfor %}
+{% endcapture %}
+
+{{ links | markdownify}}
+
+{% include services/disqus.html %}
