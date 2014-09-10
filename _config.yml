@@ -4,7 +4,8 @@ title: Materials Informatics Course Blog
 email: tony.fast@gmail.com
 description: >
   Course Blog Page for the GT Materials Informatics Course
-github:
+# Using ``gh`` so the site.github is still available
+gh:
   user: Materials-Informatics-Lab
   repo: Materials-Informatics-Lab.github.io
   # Branch hosting Github pages
