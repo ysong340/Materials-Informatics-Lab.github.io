@@ -30,3 +30,10 @@
   manager: 
     name: Abhiram Kannan
     github: phelpsforpresident
+    
+- gh: https://github.com/awhite40/MIC-Modeling-Polymer-Composites
+  gist:
+  url: http://awhite40.github.io/MIC-Modeling-Polymer-Composites/
+  manager:
+    name: Alicia White
+    github: awhite40
