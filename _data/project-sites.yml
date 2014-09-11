@@ -2,7 +2,24 @@
 # projects
 
 - gh: https://github.com/PenPatel/MIC-Mg-PSLinkages
+  gist: 
   url: http://penpatel.github.io/MIC-Mg-PSLinkages/
   manager: 
     name: Dipen Patel
     github: PenPatel
+
+- gh: https://github.com/Mahdi-Roozbahani/MIC-Packed-Particles
+  gist: 
+  url: http://Mahdi-Roozbahani.github.io/MIC-Packed-Particles/
+  manager: 
+    name: Mahdi Roozbahani
+    github: Mahdi-Roozbahani
+    
+    
+    
+- gh: https://github.com/alohse/MIC-Polymer-MD-Simulations
+  gist: 
+  url: http://alohse.github.io/MIC-Polymer-MD-Simulations/
+  manager: 
+    name: Alex Lohse
+    github: alohse
