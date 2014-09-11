@@ -23,3 +23,10 @@
   manager: 
     name: Alex Lohse
     github: alohse
+    
+- gh: https://github.com/phelpsforpresident/MIC-XRD-Polymer
+  gist: 
+  url: http://phelpsforpresident.github.io/MIC-XRD-Polymer/
+  manager: 
+    name: Abhiram Kannan
+    github: phelpsforpresident
