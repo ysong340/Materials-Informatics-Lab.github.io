@@ -1,0 +1,8 @@
+# Project pages are the top level websites hosted by each of the research 
+# projects
+
+- gh: https://github.com/PenPatel/MIC-Mg-PSLinkages
+  url: http://penpatel.github.io/MIC-Mg-PSLinkages/
+  manager: 
+    name: Dipen Patel
+    github: PenPatel
