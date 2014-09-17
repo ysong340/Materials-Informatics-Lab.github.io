@@ -1,0 +1,15 @@
+---
+layout: page
+title: projects
+---
+
+{% for sites in site.data['project-sites'] %}
+<div class="panel panel-default>
+<div class="panel-heading">
+<a href="{{sites.url}}">{{sites.url}}</a>
+</div>
+<div class="panel-body">
+<a href="{{sites.gh}}">{{sites.gh}}</a>
+</div>
+</div>
+{% endfor %}
