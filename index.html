@@ -15,9 +15,12 @@ layout: default
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> {% if {{author[0].name}} %}<small><small>by {{author[0].name}}</small></small>{% endif %}
         </h2>
+        {% if post.tagline %}
         <p><i>
           {{post.tagline}}
         </i></p>
+
+        {% endif %}
       </li>
     {% endfor %}
   </ul>

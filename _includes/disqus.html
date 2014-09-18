@@ -15,6 +15,12 @@ Page Author Disqus > Page Author Site > Site
 {% else %}
 {% endif %}
 
+
+
+{% if page.disqus_on == true or {{page.path | truncate:6}} == '_posts' %}
+
+{% if page.path != 'index.html'%}
+
 <div id="disqus_thread"></div>
 <script type="text/javascript">
 /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -28,3 +34,5 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+{% endif %}
+{% endif %}

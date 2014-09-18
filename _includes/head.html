@@ -1,39 +1,48 @@
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-    <meta name="description" content="{{ site.description }}">
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="stylesheet" href="{{ "/css/normalize.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/hover-link-style.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
 
-    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <link rel="stylesheet" href="{{ "/css/octicons/octicons.css" | prepend: site.baseurl}}">
-    <link href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl }}" rel="stylesheet">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="stylesheet" href="{{ "/css/octicons/octicons.css" | prepend: site.baseurl}}">
+  <link href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl }}" rel="stylesheet">
 
-    <script src="{{"/javascript/jquery.min.js"| prepend: site.baseurl}}"></script>
-    <script src="{{"/javascript/bootstrap.min.js"| prepend: site.baseurl}}"></script>
-    <!--<script src="//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/2.1.6/ZeroClipboard.js"></script>-->
-    <style>
-    /* CSS styling for octicons that are links */
-    a span.mega-octicon, span.octicon{
-      cursor: pointer; cursor: hand;
-    }
-    button span.mega-octicon, span.octicon{
-      cursor: pointer; cursor: hand;
-    }
-
-    .gist{font-size:13px;line-height:18px;margin-bottom:20px;width:100%}
-    .gist pre{font-family:Menlo,Monaco,'Bitstream Vera Sans Mono','Courier New',monospace !important}
-    .gist-meta{font-family:Helvetica,Arial,sans-serif;font-size:13px !important}
-    .gist-meta a{color:#26a !important;text-decoration:none}
-    .gist-meta a:hover{color:#0e4071 !important}
-
-    article.markdown-body {
-      font-family:Helvetica,Arial,sans-serif;font-size:13px !important
-    }
-    </style>
+  <script src="{{"/javascript/holder.js" | prepend: site.baseurl}}" type="text/javascript"></script>
+  <script src="{{"/javascript/jquery.min.js" | prepend: site.baseurl}}" type="text/javascript"></script>
+  <script src="{{"/javascript/bootstrap.min.js"| prepend: site.baseurl}}"></script>
+  <script src="{{"/javascript/hover-link-style.js"| prepend: site.baseurl}}"></script>
 
 
+  <style>
+  /* CSS styling for octicons that are links */
+  a span.mega-octicon, span.octicon{
+    cursor: pointer; cursor: hand;
+  }
+  button span.mega-octicon, span.octicon{
+    cursor: pointer; cursor: hand;
+  }
 
+  .gist{font-size:13px;line-height:18px;margin-bottom:20px;width:100%}
+  .gist pre{font-family:Menlo,Monaco,'Bitstream Vera Sans Mono','Courier New',monospace !important}
+  .gist-meta{font-family:Helvetica,Arial,sans-serif;font-size:13px !important}
+  .gist-meta a{color:#26a !important;text-decoration:none}
+  .gist-meta a:hover{color:#0e4071 !important}
+
+  article.markdown-body {
+    font-family:Helvetica,Arial,sans-serif;font-size:13px !important
+  }
+  </style>
+
+  <style>
+  /* CSS styling for octicons that are links */
+  a span.mega-octicon, span.octicon{
+    cursor: pointer; cursor: hand;
+  }
+  </style>
 </head>
