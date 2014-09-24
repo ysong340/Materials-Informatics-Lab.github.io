@@ -46,6 +46,8 @@
 
 
   <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="/projects/">Projects</a></li>
+    <li role="presentation" class="divider"></li>
     {% for pages in site.pages %}
     {% if pages.title %}
     <li role="presentation"><a role="menuitem" tabindex="-1" href="{{site.baseurl}}{{pages.permalink}}">{{pages.title}}</a></li>

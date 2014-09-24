@@ -1,36 +1,34 @@
-# Project pages are the top level websites hosted by each of the research 
+# Project pages are the top level websites hosted by each of the research
 # projects
 
 - gh: https://github.com/PenPatel/MIC-Mg-PSLinkages
-  gist: 
+  gist:
   url: http://penpatel.github.io/MIC-Mg-PSLinkages/
-  manager: 
+  manager:
     name: Dipen Patel
     github: PenPatel
 
 - gh: https://github.com/Mahdi-Roozbahani/MIC-Packed-Particles
-  gist: 
+  gist:
   url: http://Mahdi-Roozbahani.github.io/MIC-Packed-Particles/
-  manager: 
+  manager:
     name: Mahdi Roozbahani
     github: Mahdi-Roozbahani
-    
-    
-    
+
 - gh: https://github.com/alohse/MIC-Polymer-MD-Simulations
-  gist: 
+  gist:
   url: http://alohse.github.io/MIC-Polymer-MD-Simulations/
-  manager: 
+  manager:
     name: Alex Lohse
     github: alohse
-    
+
 - gh: https://github.com/phelpsforpresident/MIC-XRD-Polymer
-  gist: 
+  gist:
   url: http://phelpsforpresident.github.io/MIC-XRD-Polymer/
-  manager: 
+  manager:
     name: Abhiram Kannan
     github: phelpsforpresident
-    
+
 - gh: https://github.com/awhite40/MIC-Modeling-Polymer-Composites
   gist:
   url: http://awhite40.github.io/MIC-Modeling-Polymer-Composites/
@@ -38,11 +36,31 @@
     name: Alicia White
     github: awhite40
 
-- gh: https://github.com/awhite40/MIC-Modeling-Polymer-Composites
-  gist:
-  url: https://gist.github.com/jallen30gt/3b249d0b871e18f64db9
+- gh: https://github.com/jallen30gt/MIC-Tungsten-Nanowires/
+  gist: https://gist.github.com/jallen30gt/3b249d0b871e18f64db9
+  url: http://jallen30gt.github.io/MIC-Tungsten-Nanowires/
   manager:
-    name: 
-    github: 
-    
+    name: Jason Allen
+    github: jallen30gt
 
+- gh: http://alikhosravani.github.io/MIC-Al6061-NIST-project
+  gist:
+  url: https://github.com/alikhosravani/MIC-Al6061-NIST-project
+  manager:
+    name: Ali Khosravani
+    github: alikhosravani
+
+- gh: https://github.com/Imperssonator/MIC-OFET-Processing
+  gist:
+  url: http://imperssonator.github.io/MIC-OFET-Processing/
+  manager:
+    name: Nils Persson
+    github: Imperssonator
+
+
+- gh: https://github.com/MatInfTeam4
+  gist:
+  url: http://matinfteam4.github.io/
+  manager:
+    name: Ahmet Cecen
+    github: MatInfTeam4

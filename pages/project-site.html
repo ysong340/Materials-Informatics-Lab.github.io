@@ -1,16 +1,24 @@
 ---
 layout: page
 title: projects
-permalink: /pages/
+permalink: /projects/
 ---
 
+<h1>Project List</h1>
+<br>
 {% for sites in site.data['project-sites'] %}
-<div class="panel panel-default>
-<div class="panel-heading">
-<a href="{{sites.url}}">{{sites.url}}</a>
+<div class="col-sm-12 col-md-6">
+<div class="panel panel-default">
+<div class="panel-heading" id="project{{forloop.index}}">
+<a href="#project{{forloop.index}}">{{sites.manager.name}}'s </a> Team Project
 </div>
-<div class="panel-body">
-<a href="{{sites.gh}}">{{sites.gh}}</a>
+<div class="panel-body" >
+  <ul>
+    <li><a href="{{sites.url}}"><span class="mega-octicon octicon-link-external"></span>&nbsp;&nbsp;Webpage</a></li>
+    <li><a href="{{sites.gh}}"><span class="octicon octicon-mark-github"></span>&nbsp;&nbsp;Github</a></li>
+  </ul>
+
+</div>
 </div>
 </div>
 {% endfor %}
