@@ -3,14 +3,17 @@ layout: page
 title: projects
 permalink: /projects/
 ---
-
+{% assign ct=0 %}
 <h1>Project List</h1>
-<br>
-{% for sites in site.data['project-sites'] %}
+{% for groups in site.data['project-sites']['group'] %}
+<div class="row">
+  <h2>Group {{forloop.index}}</h2>
+  {% for sites in groups['projects'] %}
+  {% assign ct = ct | plus:1 %}
 <div class="col-sm-12 col-md-6">
 <div class="panel panel-default">
-<div class="panel-heading" id="project{{forloop.index}}">
-<a href="#project{{forloop.index}}">{{sites.manager.name}}'s </a> Team Project
+<div class="panel-heading" id="project{{ct}}">
+<a href="#project{{ct}}">{{sites.manager.name}}'s </a> Team Project
 </div>
 <div class="panel-body" >
   <ul>
@@ -20,5 +23,7 @@ permalink: /projects/
 
 </div>
 </div>
+</div>
+{% endfor %}
 </div>
 {% endfor %}
