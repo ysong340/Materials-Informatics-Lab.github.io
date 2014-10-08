@@ -20,6 +20,7 @@ references:
 - http://www.expandrive.com/
 - https://twitter.com/robdaly
 - /assets/SwiftStackClients-CloudberryExplorer.pdf
+- https://pypi.python.org/pypi/python-swiftclient #13
 
 swift:
 - key: Server
@@ -37,6 +38,12 @@ swift:
 - key: API/Secret Key
   value: >
     _GATech PW_
+
+pydemo:
+  gist: https://gist.github.com/tonyfast/e0084d8264ffbebd0a52
+  viewer: http://nbviewer.ipython.org/gist/tonyfast/e0084d8264ffbebd0a52
+
+tags: swiftstack, ipython, cloudberry, cyberduck, expanddrive, cloud computing, collaboration
 ---
 
 {% assign ref=page.references %}
@@ -114,5 +121,10 @@ respective client and input the required [credentials](#credentials) listed belo
 
 ### Other Services
 
-* [ExpandDrive]({{ref[10]}})
-* Insecure SSL connection
+* [ExpandDrive]({{ref[10]}}) - ExpandDrive will cost you money to save time and effort
+in aggregating your cloud services.  It plugs into most cloud services effortlessly and
+integrates them as drives on your local machine.  You won't even notice your data is floating in space.
+* [**Python-SwiftClient**]({{ref[13]}}) - This is the API for Python.
+
+  Please visit [this Notebook]({{page.pydemo.viewer}}) to see how both this Post and the Python-SwiftClient can be use
+  to load information directly from your SwiftStack account.
