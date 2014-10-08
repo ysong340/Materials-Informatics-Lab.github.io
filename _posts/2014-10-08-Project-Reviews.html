@@ -1,0 +1,124 @@
+---
+layout: post
+title: Class Project Style Review - October 9,2014
+tagline: >
+  Survey the nice work each of the student groups have contributed to their collaborative projects.
+
+references:
+- https://github.com/Shopify/liquid/wiki/Liquid-for-Designers#variable-assignment
+- https://github.com/Materials-Informatics-Lab/Materials-Informatics-Lab.github.io/blob/master/_posts/2014-10-07-Swift-Stack-on-Storm.html#L49
+- https://github.com/Materials-Informatics-Lab/research-pages/issues/1
+- https://github.com/phelpsforpresident/MIC-XRD-Polymer/blob/gh-pages/notebooks/Relationship_between_XRD_and_Autocorrelation.ipynb
+- http://nbviewer.ipython.org/github/phelpsforpresident/MIC-XRD-Polymer/blob/gh-pages/notebooks/XRScatteringData.ipynb
+- http://nbviewer.ipython.org/gist/tonyfast/e0084d8264ffbebd0a52 #5
+- http://jallen30gt.github.io/MIC-Tungsten-Nanowires/2014/09/26/Interface-Analysis.html
+- http://awhite40.github.io/MIC-Modeling-Polymer-Composites/2014/09/29/Sample-Analytics.html
+- https://github.com/awhite40/MIC-Modeling-Polymer-Composites/blob/gh-pages/_data/Cropped_fiber_matrix_400_400.mat.json
+- http://materials-informatics-lab.github.io/2014/09/17/Data-Pages-Demo.html
+- http://matinfteam4.github.io/blog/Progress-Report-2/ #10
+- http://jallen30gt.github.io/MIC-Tungsten-Nanowires/project/identification/2014/09/15/Materials-Description.html
+- http://alohse.github.io/MIC-Polymer-MD-Simulations
+- https://github.com/MatInfTeam4/MatInfTeam4.github.io/milestones #13
+- https://github.com/phelpsforpresident/MIC-XRD-Polymer/milestones
+- https://github.com/jallen30gt/MIC-Tungsten-Nanowires/milestones
+---
+
+{% assign ref = page.references %}
+
+
+## Descriptive Posts
+
+These posts are good examples of organically growing reports on datasets that contain
+minimal prior knowledge.  I both the posts we can track the history of knowledge growth
+and similarly we can append variables in the front matter for later use.
+
+{% for i in (6..7)%}
+* [{{ref[i]}}]({{ref[i]}})
+{% endfor %}
+
+## Post Organization
+
+The [Polymer Modeling]({{ref[12]}}) provides a great example for separating posts on different topics.
+
+> What are good rules to separate posts?
+
+## Data Pages
+
+I made a post a while ago about [data files]({{ref[9]}}).  Data files can be accessed by
+any post or page in a Jekyll site.  Currently, we have one [example]({{ref[8}}).  These files
+should contain lightweight metadata for:
+
+* Simple Analytics
+* Pointers to Files
+* Comments
+
+## References
+
+Lot's of y'all are managing your references really well!  Let's make it easier though.
+
+References can be created using an array variable ``references`` in the front matter.
+All the fields elements in ``references`` are appended to the end of a blog post
+by the Jekyll template.
+
+## Tagline
+
+Add the field ``tagline`` in the front matter to create a short description of the post
+on your blog index.
+
+## Diagrams
+
+Diagrams are absolutely critical to a data scientist
+that needs to learn about our problem sets.  Most of this information can only be observed visually.
+
+I love the diagrams belowbecause they are as descriptive as they can and do not
+assume any expertise on the viewer:
+
+{% for i in (10..11)%}
+* [{{ref[i]}}]({{ref[i]}})
+{% endfor %}
+
+### Citing References
+
+References are cited with the following syntax {% raw %}``{{page.references[i]}}``{% endraw %} where
+``i`` is the index of the element in the arrage.  Appreviated references can be made
+using the liquid statement [``assign``]({{ref[0]}}).  For example, in [another post]({{ref[1]}})
+the variable ``ref`` is assigned [``{% raw %}{% assign ref=page.references %}{% endraw %}``]({{ref[1]}});
+references are now access with ``{% raw %}{{ref[i]}}{% endraw %}``.
+
+> Remember the zero-indexing.
+
+## Disqus is Still Busted
+
+On some projects, your Disqus comments are not working.  Ahmet posted [a solution]({{ref[2]}}) for this problem.
+
+## Project Management
+
+These projects have illustrated very descriptive uses of Github Issues and Milestones:
+
+{% for i in (14..15)%}
+* [{{ref[i]}}]({{ref[i]}})
+{% endfor %}
+
+
+## IPython
+
+I hope some of y'all move towards IPython notebooks to conduct your research.  They are a useful
+connection between the content and context of your research.
+
+### Some Examples Class Notebooks
+
+{% for i in (3..5)%}
+* [{{ref[i]}}]({{ref[i]}})
+{% endfor %}
+
+
+## Reusable Front Matter for Blogging and Computing
+
+> Q: What do I put in the Front Matter?
+
+> A: Potentially resusable content.  (ie. links, statistics, commments)
+
+In a recent [post]({{ref[9]}}), I show a IPython notebook that reuses the YAML front matter in the
+python environment.  Post front matter can be expected to mature as a data file when the
+as the veracity and value of the methods are assessed during the research process.  In an example [data file]({{ref[8]}}),
+small statistics are included that can be used later.
