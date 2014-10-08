@@ -1,0 +1,116 @@
+---
+layout: post
+title: SwiftStack on Storm
+tagline: >
+  Personal Object Storage for the Georgia Tech folks... and why SwiftStack Rules!
+
+references:
+- https://www.swiftstack.com/
+- http://www.openstack.org/
+- http://www.rackspace.com/cloud/what_is_cloud_computing/
+- https://github.com/swiftstack
+- https://github.com/swiftstack/django-tastypie
+- https://github.com/swiftstack/sc-benchmark
+- https://wiki.openstack.org/wiki/Main_Page
+- https://swift.storm.gatech.edu/console #7
+- https://cyberduck.io/?l=en #8
+- http://www.cloudberrylab.com/free-openstack-storage-explorer.aspx #9
+- http://www.expandrive.com/
+- https://twitter.com/robdaly
+- /assets/SwiftStackClients-CloudberryExplorer.pdf
+
+swift:
+- key: Server
+  value: swift.storm.gatech.edu
+- key: Website URL
+  value: https://swift.storm.gatech.edu
+- key: Authentication Service
+  value: swift.storm.gatech.edu/auth/v1.0
+- key: Port
+  value: >
+    443
+- key: User name
+  value: >
+    _GATech User name_
+- key: API/Secret Key
+  value: >
+    _GATech PW_
+---
+
+{% assign ref=page.references %}
+
+## Object Storage
+
+Dropbox, Google Drive, Amazon Web Services, yadda yadda are all object storage systems that allow access to data and metadata
+anywhere on networks open or closed.  Commercial services are freemium, and consequently
+a lot of features are exclusive and we have less choice on the fate of our information .
+
+Yay Open Source!  [Openstack]({{ref[1]}}) is an open-source project building a free [cloud computing platform]({{ref[2]}}).
+In class, we are going to use OpenStack's Object Storage Service [SwiftStack]({{ref[0]}}).  SwiftStack is an
+[open source organization]({{ref[3]}}) with extensive contributions that extend it to
+new interfaces, authorization services, modules for programming, scientific computing benchmarks...
+
+## SwiftStack scales!
+
+SwiftStack has an intuitive API with diverse applications in [scientific computing]({{ref[5]}}) or
+[web application development]({{ref[4]}}).  You can do a lot of [cool things]({{ref[6]}}) with SwiftStack:
+
+* Header calls can contain user-defined metadata
+* Handles Small and Large Files
+* Containers and blobs can be versioned
+* Sharing files can exist from never to forever
+* Automated back-up
+* Federation
+* Combination with other OpenStack features for Authenication and Computing
+
+## SwiftStack on Storm
+
+Georgia Tech College of Engineering hosts an instance of [SwiftStack]({{ref[7]}}) available to Georgia Tech
+students and faculty via your Georgia Tech credentials.  The bare-bones
+SwiftStack web console is not usable, don't try right now. _We'll use some third party clients to
+interact more efficiently._
+
+## Swift/Open Stack Clients
+
+Below are two free clients to manage your SwiftStack accounts and objects.  Download _your_
+respective client and input the required [credentials](#credentials) listed below.
+
+### Mac Users :: Cyberduck
+
+* Create a new bookmark so you only have to do this once
+* In the top drop down menu choose ``OpenStack Swift(SWauth)``
+* Create an alias for this connection in ``Nickname``
+* Fill in the rest of the [credentials](#credentials)
+* You may be prompted for a password with is GATech password.
+
+### Windows Users :: CloudBerry
+
+* Click ``file > OpenStack``
+* Add a new account
+* Set an alias in ``Display Name``
+* Fill in the rest of the [credentials](#credentials)
+* Make sure ``Authentication Service`` is unchecked.
+* You may be prompted for a password with is GATech password.
+
+> [A how-to]({{ref[12]}}) on CloudBerry from [Rob Daly]({{ref[11]}}).
+
+
+
+
+## Credentials
+
+<table class="table table-bordered table-striped">
+{% for pairs in page.swift %}
+<tr>
+  <td>{{pairs.key}}</td>
+  <td>{{pairs.value | markdownify }}</td>
+</tr>
+{% endfor %}
+</table>
+
+> GT folks do not use Keystone Authorization
+
+### Other Services
+
+* [ExpandDrive]({{ref[10]}})
+* Insecure SSL connection
