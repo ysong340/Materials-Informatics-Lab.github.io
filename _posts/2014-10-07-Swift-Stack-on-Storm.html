@@ -21,6 +21,8 @@ references:
 - https://twitter.com/robdaly
 - /assets/SwiftStackClients-CloudberryExplorer.pdf
 - https://pypi.python.org/pypi/python-swiftclient #13
+- https://trac.cyberduck.io/wiki/help/en/howto/openstack#Authenticationwithswauth
+- https://svn.cyberduck.ch/trunk/profiles/Openstack%20Swift%20(Swauth).cyberduckprofile
 
 swift:
 - key: Server
@@ -84,15 +86,20 @@ interact more efficiently._
 Below are two free clients to manage your SwiftStack accounts and objects.  Download _your_
 respective client and input the required [credentials](#credentials) listed below.
 
-### Mac Users :: Cyberduck
+### Mac/Windows Users :: [Cyberduck]({{ref[8]}})
 
 * Create a new bookmark so you only have to do this once
 * In the top drop down menu choose ``OpenStack Swift(SWauth)``
+
+  You may need to install the [``OpenStack Swift(SWauth)``]({{ref[14]}}) profile for HTTPS. [Download Profile]({{ref[15]}}).
+  After you download the profile you should have access to SWauth which authenticates SwiftStack independent of 
+  OpenStack's Keystone Authentication service.
+  
 * Create an alias for this connection in ``Nickname``
 * Fill in the rest of the [credentials](#credentials)
 * You may be prompted for a password with is GATech password.
 
-### Windows Users :: CloudBerry
+### Windows Users :: [CloudBerry]({{ref[9]}})
 
 * Click ``file > OpenStack``
 * Add a new account
