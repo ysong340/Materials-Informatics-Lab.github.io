@@ -83,11 +83,11 @@ interpet it.  [YAML is a human-interpretted markup language](/tools/#YAML Ain't 
 Front Matter is defined by the text block between two pairs of _three hyphens_ ``---``
 
 {% highlight YAML %}
---- # Start front matter
+# Start front matter
 layout: post # Triggers the template to render
 title: Example Front Matter # Alternate title
 foo: bar
---- # End front matter
+# End front matter
 
 # Post Content
 
@@ -115,8 +115,7 @@ As stated eariler, YAML front matter is required for Jekyll pages.  The Jekyll t
 Dummy front matter with contain two rows of triple hyphens with no text in between.
 
 {% highlight YAML %}
----
----
+removed for analytics
 {% endhighlight %}
 
 
@@ -194,7 +193,6 @@ YAML accepts the following:
 **Commented YAML User-Defined Front Matter**
 
 {% highlight YAML %}
----
 # Source of the data from a Public Dropbox folder
 source: https://www.dropbox.com/s/cy4jumu6c50jut3/matin-test.png?dl=0
 # Dummy Values for Statistics
@@ -212,7 +210,6 @@ imgs:
 references:
   - http://google.com
   - http://dropbox.com
----
 {% raw %}
 # Reference Simple Assignment
 
