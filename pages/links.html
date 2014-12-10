@@ -1,0 +1,24 @@
+---
+title: References Collection
+permalink: /links/
+layout: page
+markdownify: false
+---
+
+
+
+<h1>Presentations for the Materials Informatics Course</h1>
+<div class="row">
+There are <span class="h4">{{site.data['links'] | size}}</span> references used
+during the Fall 2014 of the class.
+</div>
+
+<h2>List of Links</h2>
+<div class="row">
+
+<ul>
+{% for link in site.data['links'] %}
+  <li><a href="{{link}}">{{link}}</a></li>
+{% endfor %}
+</ul>
+</div>

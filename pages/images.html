@@ -1,0 +1,19 @@
+---
+title: Image Collection
+permalink: /images/
+layout: page
+markdownify: false
+---
+
+<h1>Images for the Materials Informatics Course</h1>
+<div class="row">
+There are <span class="h4">{{site.data['images'] | size}}</span> images made by the Fall 2014 class.
+</div>
+<div class="row">
+
+{% for img in site.data['images'] %}
+<div class="col-md-4">
+<img src="{{img}}"></img>
+</div>
+{% endfor %}
+</div>

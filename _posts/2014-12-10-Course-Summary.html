@@ -1,0 +1,93 @@
+---
+layout: post
+title: Analytics of Course
+tagline: Network analysis and data science on the course interactions
+collect:
+  links: /links/
+  slides: /slides/
+  images: /images/
+presentation: >
+  http://www.slideshare.net/slideshow/embed_code/42570797
+---
+## Aggregated Statistics
+
+<div class="row">
+{% assign post = site.data['stats']['all'] %}
+
+<div class="panel panel-default">
+<div class="panel-heading">
+  <h3>{{post['post']}} <small>Posts</small></h3>
+</div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <tr>
+        <td>authors</td><td>{{post['author']}}</td>
+      </tr>
+    <tr>
+      <td>images</td><td>{{post['image']}}</td>
+    </tr>
+    <tr>
+    <td>links</td><td>{{post['links']}} </td>
+  </tr>
+  <tr>
+    <td>decks</td><td>{{post['deck']}}</td>
+  </tr>
+  <tr>
+    <td>comments</td><td>{{post['comment']}}</td>
+  </tr>
+  </table>
+
+
+</div>
+</div>
+</div>
+
+## Final Presentation
+
+The final presentation give by [Tony](https://github.com/tonyfast) on December 10 for the
+FLAMEL workshop at Georgia Tech.
+
+<iframe src="{{page.presentation}}" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/tonyfast1/flamel-materials-informatics-course-roundup" title="FLAMEL Materials Informatics Course Roundup" target="_blank">FLAMEL Materials Informatics Course Roundup</a> </strong> from <strong><a href="//www.slideshare.net/tonyfast1" target="_blank">Tony Fast</a></strong> </div>s
+## Page Statistics
+
+<div class="row">
+{% for post in site.data['stats']['single'] %}
+<div class="col-sm-3">
+
+<div class="panel panel-default">
+<div class="panel-heading">
+  <h3>{{post['post']}} <small>Posts</small></h3>
+</div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <tr>
+        <td>authors</td><td>{{post['author']}}</td>
+      </tr>
+    <tr>
+      <td>images</td><td>{{post['image']}}</td>
+    </tr>
+    <tr>
+    <td>links</td><td>{{post['links']}} </td>
+  </tr>
+  <tr>
+    <td>decks</td><td>{{post['deck']}}</td>
+  </tr>
+  <tr>
+    <td>comments</td><td>{{post['comment']}}</td>
+  </tr>
+  </table>
+
+
+</div>
+</div>
+</div>
+{% endfor %}
+</div>
+
+
+
+## Collected Content
+
+{% for link in page.collect %}
+* [A collection of {{link[0] }}]({{link[1]}})
+{% endfor %}
