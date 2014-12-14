@@ -1,0 +1,33 @@
+post:
+  - name: Computational Approaches to Identify Multi-layer Formation and Growth on Tungsten Nano-Wires
+    url: http://jallen30gt.github.io/MIC-Tungsten-Nanowires/2014/12/09/Executive-Summary.html
+    slide: http://www.slideshare.net/jallen30gt/2014-12-07-final-presentation-42495482
+    init: http://gist.github.com/jallen30gt/3b249d0b871e18f64db9
+  - name: Microstructure Reconstruction from X-ray Scattering Data
+    url: http://phelpsforpresident.github.io/MIC-XRD-Polymer/2014/12/12/Final-Post.html
+    init: http://gist.github.com/davidbrough1/06017725d308a8f308d2
+  - name: Crystallinity Analysis in Polyethylene Molecular Dynamics
+    url: http://alohse.github.io/MIC-Polymer-MD-Simulations/2014/12/12/Executive-Summary.html
+    init: http://gist.github.com/npaulson/1bbc2cb92123678a10f9
+    slide: http://docs.google.com/presentation/d/1jKwKXDYey1iWiCRYHyUvFxd5Cngb33ubD5sVxIpGqaU/
+  - name: Developing Structure-Property Linkage for Glass Fibre Reinforced Polymer Composites
+    init: http://gist.github.com/awhite40/e6e4a8d8a47dbfdd19b8
+    url: http://awhite40.github.io/MIC-Modeling-Polymer-Composites/2014/12/12/Final-Post.html
+    slide: http://www.slideshare.net/AliciaWhite3/developing-structure-property-linkages-for-fiber-reinforced-polymer-composites
+  - name: Structure-Property Linkage of Packed Soil Particles
+    init: http://gist.github.com/Mahdi-Roozbahani/5a6e789d62f9fe3704ef
+    url: http://mahdi-roozbahani.github.io/MIC-Packed-Particles/2014/12/11/Executive%20summary.html
+    slide: http://www.slideshare.net/mahdiroozbahani7/final-presentation-2-42474301
+  - name: Quantifying the Structure-Property Relationship in P3HT thin film transistors
+    url: http://imperssonator.github.io/MIC-OFET-Processing/2014/12/10/Final-Post.html
+  - name: Exploring Process Structure Linkages in Machining of Commercial Purity Titanium
+    init: http://gist.github.com/pfz3/054cf5726b18be8a657e
+    url: http://matinfteam4.github.io/blog/Executive-Summary/
+  - name: Quantifying microstructural features and finding structure-property linkages in aging process of Al6061
+    slide: http://www.slideshare.net/alikhosravani/nist-project-final-report-42480340
+    url: http://alikhosravani.github.io/MIC-Al6061-NIST-project/2014/12/12/Executive-Summary.html
+    init: http://gist.github.com/alikhosravani/b66e2204d5a33ec8d7aa
+  - name: Novel protocol for developing Structure-Property linkages for Polycrystalline materials
+    init: http://gist.github.com/PenPatel/3e9ef5ab107be1867e2a
+    url: http://penpatel.github.io/MIC-Mg-PSLinkages/2014/12/05/Final-Post-Polycrystalline-St-Prop.html
+    slide: http://www.slideshare.net/0309akash/v2-final-presentation-08122014-42479757

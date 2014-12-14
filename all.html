@@ -1,0 +1,96 @@
+---
+---
+{% include head.html %}
+
+<body>
+  <!-- Get Jekyll variables in JSON -->
+  <div id="jekyllvars" style="display:none;">{{site.data['final-post']['post'] | jsonify }}</div>
+  <div class="container">
+    <div class="row">
+      <div class="panel">
+      <ul class="nav nav-pills nav-justified">
+        {% for post in site.data['final-post']['post'] %}
+        <li role="presentation"><a href="#" data-loop="{{forloop.index}}">{{forloop.index}}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    </div>
+    <div id="title" class="row">
+      <h3></h3>
+      <a href="" target="_blank">Final Project Report</a>
+    <div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h4>BEFORE</h4>
+          </div>
+          <div class="panel-body">
+            {% for post in site.data['final-post']['post'] %}
+            <!-- Preload the gist and hide them otherwise there needs to be a
+            cross-origin request -->
+            <div class="init" data-gist="{{forloop.index}}" style="display:none;">
+            <script src="{{post['init'] | append:'.js'}}"></script>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h4>AFTER</h4>
+          </div>
+          <div id="final" class="panel-body">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p>
+      Click on a project NUMBER at the top of the page.  It will show the initial
+      project description directly aside their final presentation. There are some projects
+      that didn't changed much, but other's that have a very different scope.<i>Not
+        all of the groups are accounted for yet.</i>
+      </p>
+    </div>
+
+  </div>
+  {% include disqus.html %}
+</body>
+
+<script>
+
+// Variables from the blog
+var projects = JSON.parse( $('#jekyllvars').text() );
+
+function StripHTML( resp ){
+  // Use noembed for html embed information
+  $('#final').html( resp['html'] );
+}
+
+// Onclick event for tabs
+$('li a').click( function(){
+
+  // Button index
+  var loopid = $(this).data("loop")-1 ;
+
+  $('#title h3').text( projects[loopid]['name'] );
+  $('#title a').attr( "href", projects[loopid]['url'] );
+  $("#final").html('')
+  //JSON-P request for slide share embed using noembed
+  $.ajax({
+    url: 'http://noembed.com/embed?url=' + projects[loopid]['slide'],
+    dataType: 'jsonp',
+    success: StripHTML,
+    error: function(){$('#final').text(projects[loopid]['slide'])}
+  });
+
+  // Lazy hack to shows gists
+  $('.init').hide();
+  $($('.init')[loopid]).show();
+
+})
+
+//slide share
+</script>
