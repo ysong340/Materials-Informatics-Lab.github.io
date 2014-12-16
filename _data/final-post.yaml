@@ -6,6 +6,7 @@ post:
   - name: Microstructure Reconstruction from X-ray Scattering Data
     url: http://phelpsforpresident.github.io/MIC-XRD-Polymer/2014/12/12/Final-Post.html
     init: http://gist.github.com/davidbrough1/06017725d308a8f308d2
+    slide: http://www.slideshare.net/slideshow/embed_code/42769336
   - name: Crystallinity Analysis in Polyethylene Molecular Dynamics
     url: http://alohse.github.io/MIC-Polymer-MD-Simulations/2014/12/12/Executive-Summary.html
     init: http://gist.github.com/npaulson/1bbc2cb92123678a10f9
